@@ -9,7 +9,7 @@
 NetPolyGen is a computational framework designed to analyze and visualize **gene-gene interaction networks** in the context of complex human traits. The platform integrates multiple datasets to uncover trait-specific variations in gene interactions and provides an accessible interface for both exploratory analysis and hypothesis-driven research.
 
 
-## Article Related to NetPolyGen-
+## Article Related to NetPolyGen
 
 **Title**: 
 A Systematic Analysis of Gene-Gene Interaction Networks Underlying Human Polygenic Phenotypes
@@ -25,7 +25,7 @@ Ehsan Tamandeh (1), Johannes Schumacher (1), Eugene Shakhnovich (3), Adrian Sero
 
 ## 
 
-**PolyGenNet Website**:  [NetPolyGen](https://netpolygen.com/)
+**NetPolyGen Website**:  [NetPolyGen](https://netpolygen.com/)
 
 ## 
 This project is inspired by and associated with the research presented in the paper **A Systematic Analysis of Epistatic Gene-Interaction Networks Underlying Human Polygenic Phenotypes**. 
