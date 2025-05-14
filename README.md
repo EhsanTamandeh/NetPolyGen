@@ -11,7 +11,7 @@ NetPolyGen is a computational framework designed to analyze and visualize **gene
 
 
 
-**Title**: 
+
 A Systematic Analysis of Gene-Gene Interaction Networks Underlying Human Polygenic Phenotypes
 
 
