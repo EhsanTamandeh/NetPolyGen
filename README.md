@@ -8,22 +8,21 @@
 
 NetPolyGen is a computational framework designed to analyze and visualize **gene-gene interaction networks** in the context of complex human traits. The platform integrates multiple datasets to uncover trait-specific variations in gene interactions and provides an accessible interface for both exploratory analysis and hypothesis-driven research.
 
+##
+**Gene Interaction Network Architecture of Human Polygenic Traits Reveals Domain-Specific Connectivity and Evolutionary Constraint**
 
+# Authors: 
+Ehsan Tamandeh (1), Jessica Bigge (1), Adrian Serohijos (2), Johannes Schumacher (1), Carlo Maj (1), Pouria Dasmeh (1)*
+1. Center for Human Genetics, Philipps University of Marburg, Marburg, Germany. 
+2. Department of Biochemistry, Faculty of Medicine, University of Montreal, Montreal, Canada. 
 
-
-
-Ehsan Tamandeh (1), Johannes Schumacher (1), Adrian Serohijos (2), Carlo Maj (1), Pouria Dasmeh (1,3)
-
-1) Center for Human Genetics, Philipps University of Marburg, Marburg, Germany.
-2) Department of Biochemistry, Faculty of Medicine, University of Montreal, Montreal, Canada. 
-3) Department of Chemistry and Chemical Biology, Harvard University, Cambridge, USA.
 
 ## 
 
 **NetPolyGen Website**:  [NetPolyGen](https://netpolygen.com/)
 
 ## 
-This project is inspired by and associated with the research presented in the paper **A Systematic Analysis of Epistatic Gene-Interaction Networks Underlying Human Polygenic Phenotypes**. 
+This project is inspired by and associated with the research presented in the paper **Gene Interaction Network Architecture of Human Polygenic Traits Reveals Domain-Specific Connectivity and Evolutionary Constraint**. 
 
 The work explores the interplay between gene networks and complex human traits, revealing trait-specific patterns of genetic interaction. 
 
