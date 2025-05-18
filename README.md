@@ -12,7 +12,7 @@ NetPolyGen is a computational framework designed to analyze and visualize **gene
 **Gene Interaction Network Architecture of Human Polygenic Traits Reveals Domain-Specific Connectivity and Evolutionary Constraint**
 
 ## Authors: 
-Ehsan Tamandeh (1), Jessica Bigge (1), Adrian Serohijos (2), Johannes Schumacher (1), Carlo Maj (1), Pouria Dasmeh (1) *
+Ehsan Tamandeh(1), Jessica Bigge(1), Adrian Serohijos(2), Johannes Schumacher(1), Carlo Maj(1), Pouria Dasmeh(1) *
 1. Center for Human Genetics, Philipps University of Marburg, Marburg, Germany. 
 2. Department of Biochemistry, Faculty of Medicine, University of Montreal, Montreal, Canada.
 
