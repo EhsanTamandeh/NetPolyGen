@@ -1,0 +1,132 @@
+#install packages
+
+install.packages("readr")
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("STRINGdb")
+
+install.packages("STRINGdb")
+install.packages("igraph")
+install.packages("rbioapi")
+install.packages("fitdistrplus")
+install.packages("gprofiler2")
+install.packages("MASS")
+install.packages("survival")
+
+#load packages
+library("readr")
+library("STRINGdb")
+library("igraph")
+library("rbioapi")
+library("fitdistrplus")
+library("gprofiler2")
+library("MASS")
+library("survival")
+library("fitdistrplus")
+
+#------------------------------------------------
+
+#Associated
+
+#Top lowest P-values
+#upload magma p.r3 file 
+file_path <- file.choose()
+data_matrix <- read.table(file_path, header = TRUE)
+# Get the p-values from column X
+p_values <- data_matrix[-1, X]
+
+sorted_p_values <- sort(p_values)
+
+top_500_p_values <- head(sorted_p_values, 500)
+
+indices <- which(data_matrix[-1, X] %in% top_500_p_values)
+
+related_names <- data_matrix[indices + 1, 1]  # Adding 1 to indices due to header row
+
+# Choose the file path to save the results
+output_file <- file.choose()
+
+write.table(related_names, file = output_file, col.names = FALSE, row.names = FALSE, quote = FALSE)
+cat("Result saved to file:", output_file, "\n")
+
+#Non-Associated
+
+#Top highest P-values
+
+file_path <- file.choose()
+data_matrix <- read.table(file_path, header = TRUE)
+p_values <- data_matrix[-1, X]
+
+sorted_p_values <- sort(p_values, decreasing = TRUE)
+
+top_500_p_values <- head(sorted_p_values, 500)
+
+indices <- which(data_matrix[-1, X] %in% top_500_p_values)
+
+related_names <- data_matrix[indices + 1, 1]  # Adding 1 to indices due to header row
+
+output_file <- file.choose()
+
+write.table(related_names, file = output_file, col.names = FALSE, row.names = FALSE, quote = FALSE)
+cat("Result saved to file:", output_file, "\n")
+
+data_matrix <- read.table(file_path, header = TRUE)
+p_values <- data_matrix[-1, X]
+
+sorted_p_values <- sort(p_values)
+
+top_500_p_values <- head(sorted_p_values, 500)
+indices <- which(data_matrix[-1, X] %in% top_500_p_values)
+
+related_names <- data_matrix[indices + 1, 1]  # Adding 1 to indices due to header row
+
+# Map the related names to IDs using the gconvert function
+X <- gconvert(query = related_names, organism = "hsapiens", target = "ENSG")
+proteins <- X$name
+proteins <- as.character(proteins)
+
+# Map protein symbols to IDs
+proteins_mapped <- rba_string_map_ids(ids = proteins, species = 9606)
+proteins_ids <- proteins_mapped$stringId
+
+# Create the interaction network
+int_net <- rba_string_interactions_network(ids = proteins_ids,
+                                           species = 9606,
+                                           network_type = "functional",
+                                           required_score = 900)
+
+matrix <- int_net[, c(3, 4, 6)]  # Assuming the columns are for gene names, scores, and IDs
+
+library(igraph)
+
+graph <- graph_from_data_frame(matrix, directed = FALSE)
+
+E(graph)$weight <- matrix$score
+
+graph <- simplify(graph)
+
+node_color <- "#808080"  # Gray
+edge_color <- "#000000"  # Black
+
+folder_path <- dirname(file.choose())
+
+# Plot the graph
+plot(graph, 
+     vertex.size = 8, 
+     vertex.label.cex = 0.5,
+     vertex.label.color = "black",
+     vertex.color = node_color,
+     edge.color = edge_color,
+     edge.width = 5)
+# Save the plot as PNG in the chosen folder
+png(file.path(folder_path, "graph_plot.png"))
+plot(graph, 
+     vertex.size = 8, 
+     vertex.label.cex = 0.5,
+     vertex.label.color = "black",
+     vertex.color = node_color,
+     edge.color = edge_color,
+     edge.width = 5)
+dev.off()
