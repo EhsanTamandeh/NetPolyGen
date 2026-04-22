@@ -1,3 +1,6 @@
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Jupyter Notebook](https://img.shields.io/badge/Notebook-Jupyter-orange)
+![R](https://img.shields.io/badge/R-4.0-blue)
 <div align="center">
     <h1>NetPolyGen</h1>
     
