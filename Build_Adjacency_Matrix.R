@@ -1,0 +1,53 @@
+#R
+
+file_path <- file.choose()
+data_matrix <- read.table(file_path, header = TRUE)
+
+A <- 1:4756  # Define the range of column numbers to process
+
+for (col_num in A) {
+  p_values <- data_matrix[-1, col_num]
+  
+  sorted_p_values <- sort(p_values)
+  
+  top_500_p_values <- head(sorted_p_values, 500)
+  
+  indices <- which(data_matrix[-1, col_num] %in% top_500_p_values)
+  
+  related_names <- data_matrix[indices + 1, 1]  # Adding 1 to indices due to header row
+  
+  X <- gconvert(query = related_names, organism = "hsapiens", target = "ENSG")
+  
+  proteins_mapped <- rba_string_map_ids(ids = X$name, species = 9606)
+  
+  all_proteins <- unique(proteins_mapped[, 2])
+  
+  int_net <- rba_string_interactions_network(
+    ids = proteins_mapped$stringId,
+    species = 9606,
+    network_type = "functional",
+    required_score = 900
+  )
+  
+  matrix <- int_net[, c(3, 4, 6)]
+  
+  adj_matrix <- matrix(0, nrow = length(all_proteins), ncol = length(all_proteins))
+  rownames(adj_matrix) <- all_proteins
+  colnames(adj_matrix) <- all_proteins
+  
+  for (i in 1:nrow(matrix)) {
+    protein1 <- matrix[i, 1]
+    protein2 <- matrix[i, 2]
+    
+    if (protein1 %in% all_proteins && protein2 %in% all_proteins) {
+      adj_matrix[protein1, protein2] <- matrix[i, 3]
+      adj_matrix[protein2, protein1] <- matrix[i, 3]  # Assuming an undirected graph
+    }
+  }
+  
+  file_name <- paste0("adj_matrix_col_num_", col_num, ".csv")
+  
+  write.csv(adj_matrix, file = file_name, row.names = TRUE)
+  
+  print(paste("Adjacency matrix saved to", file_name))
+}
