@@ -25,10 +25,11 @@ Ehsan Tamandeh(1), Jessica Bigge(1), Adrian Serohijos(2), Johannes Schumacher(1)
 
 **NetPolyGen Website**:  [NetPolyGen](https://netpolygen.com/)
 
-<div style="display: flex; gap: 10px;">
-  <img src="https://drive.google.com/file/d/1tb73VGPq7gIRS9oe6u5lseyLnCzr6meG" alt="NetPolyGen Website" width="300"/>
-</div>
 
+<div style="display: flex; gap: 10px;">
+  <img src="https://drive.google.com/uc?export=view&id=1tb73VGPq7gIRS9oe6u5lseyLnCzr6meG" 
+       alt="NetPolyGen Website" width="300"/>
+</div>
 
 ## 
 This project is inspired by and associated with the research presented in the paper **Gene Interaction Network Architecture of Human Polygenic Traits Reveals Domain-Specific Connectivity and Evolutionary Constraint**. 
