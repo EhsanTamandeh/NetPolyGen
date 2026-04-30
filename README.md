@@ -28,7 +28,7 @@ Ehsan Tamandeh(1), Jessica Bigge(1), Adrian Serohijos(2), Johannes Schumacher(1)
 
 <div style="display: flex; gap: 10px;">
   <img src="https://drive.google.com/uc?export=view&id=1tb73VGPq7gIRS9oe6u5lseyLnCzr6meG" 
-       alt="NetPolyGen Website" width="300"/>
+       alt="NetPolyGen Website" width="1000"/>
 </div>
 
 ## 
