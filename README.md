@@ -23,7 +23,7 @@ Ehsan Tamandeh(1), Jessica Bigge(1), Adrian Serohijos(2), Johannes Schumacher(1)
 
 ## 
 
-**NetPolyGen Website**:  [NetPolyGen](https://netpolygen.com/)
+**NetPolyGen Website**:  [NetPolyGen.com](https://netpolygen.com/)
 
 
 <div style="display: flex; gap: 10px;">
