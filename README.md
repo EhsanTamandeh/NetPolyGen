@@ -25,7 +25,7 @@ Ehsan Tamandeh(1), Kiran Kunwar(1), Jessica Bigge(1), Adrian Serohijos(2), Johan
 
 The NetPolyGen software and the associated adjacency matrix dataset are permanently archived on Zenodo.
 
-### Software
+### Data availability 
 
 * **GitHub Repository:** https://github.com/EhsanTamandeh/NetPolyGen
 * **Zenodo DOI:** https://doi.org/10.5281/zenodo.21529453
