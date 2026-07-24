@@ -20,6 +20,24 @@ Ehsan Tamandeh(1), Kiran Kunwar(1), Jessica Bigge(1), Adrian Serohijos(2), Johan
 2. Department of Biochemistry, Faculty of Medicine, University of Montreal, Montreal, Canada.
 
 *. Corresponding author: Dasmeh@staff.uni-marburg.de; Carlo.maj@uni-marburg.de
+
+## Citation and Archived Resources
+
+The NetPolyGen software and the associated adjacency matrix dataset are permanently archived on Zenodo.
+
+### Software
+
+* **GitHub Repository:** https://github.com/EhsanTamandeh/NetPolyGen
+* **Zenodo DOI:** https://doi.org/10.5281/zenodo.21529453
+
+### Dataset
+
+* **Title:** *Adjacency Matrices for Protein–Protein Interaction Networks Underlying Human Polygenic Traits*
+* **Zenodo DOI:** https://doi.org/10.5281/zenodo.21530317
+
+If you use NetPolyGen or the accompanying dataset in your research, please cite the corresponding Zenodo records in addition to the associated manuscript.
+
+
 ## 
 
 **NetPolyGen Website**:  [NetPolyGen.com](https://netpolygen.com/)
