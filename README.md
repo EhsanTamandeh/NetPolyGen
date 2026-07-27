@@ -202,7 +202,11 @@ Variations in these hubs or their interactions can have cascading effects on the
  Ehsan Tamandeh
  
  Email: ehsan.tamandeh007@gmail.com
- 
+
+
+ ## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 
 
